@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:id="@+id/main">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-<Button
-    android:id="@+id/button_to_product_list"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Go to Product List"
-    android:layout_gravity="center" />
-</LinearLayout>
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Phantom Computers"
+        android:textSize="34sp"
+        android:fontFamily="@font/caveat_regular"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore a world of cutting-edge electronics at unbeatable prices. From the latest gadgets to essential tech accessories, we’ve got everything you need. Ready to shop or create an account? Let’s get started!"
+        android:textSize="16sp"
+        android:fontFamily="@font/kalam_regular"
+        android:textColor="@color/black"
+        android:layout_below="@id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:padding="16dp"
+        android:gravity="center"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:fontFamily="@font/bree_serif_regular"
+        android:layout_below="@id/introText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#ff5400"
+        />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bree_serif_regular"
+        android:text="Register"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#ff5400"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
