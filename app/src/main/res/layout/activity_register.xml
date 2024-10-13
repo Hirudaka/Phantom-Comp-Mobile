@@ -1,49 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@drawable/welcome3"
+    tools:context=".RegisterActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_background"
-        tools:context=".RegistrationActivity">
+        android:background="#80434343"/>
 
-        <!-- CardView for Registration Form -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="49sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/caveat_regular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="12"
+        android:shadowRadius="1"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/registrationTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="Register"
-
-                    android:textSize="32sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/usernameEditText"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="26dp"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/welcomeText">
 
                 <EditText
                     android:id="@+id/usernameEditText"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:background="@drawable/edittext_background"
@@ -53,14 +50,11 @@
                     android:padding="12dp"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/darker_gray"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/registrationTitle" />
+                    android:textSize="16sp"/>
 
                 <EditText
                     android:id="@+id/emailEditText"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/edittext_background"
@@ -77,7 +71,7 @@
 
                 <EditText
                     android:id="@+id/passwordEditText"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/edittext_background"
@@ -94,7 +88,7 @@
 
                 <Button
                     android:id="@+id/registerButton"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:backgroundTint="#ff5400"
@@ -105,8 +99,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    </LinearLayout>
+
+</RelativeLayout>
