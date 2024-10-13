@@ -27,40 +27,42 @@
         android:layout_height="wrap_content"
         android:text="Welcome to Phantom Computers"
         android:textSize="42sp"
+
         android:fontFamily="@font/caveat_regular"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:textColor="@color/white"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="12"
+        android:shadowRadius="1"/>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
-        android:backgroundTint="#D5FFFFFF"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/welcomeText">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="19dp">
 
     <TextView
         android:id="@+id/introText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Explore a world of cutting-edge electronics at unbeatable prices. From the latest gadgets to essential tech accessories, we’ve got everything you need. Ready to shop or create an account? Let’s get started!"
+        android:text="Explore a world of cutting-edge electronics at unbeatable prices. From the latest gadgets to essential tech accessories, we’ve got everything you need."
         android:textSize="16sp"
         android:fontFamily="@font/kalam_regular"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_below="@id/welcomeText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:padding="16dp"
-        android:gravity="center"/>
+        android:layout_marginTop="0dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="7"
+        android:shadowRadius="1"/>
 
     <!-- Login Button -->
     <Button
@@ -72,8 +74,32 @@
         android:layout_below="@id/introText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
         android:backgroundTint="#ff5400"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/regidterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dont Have an account ?"
+            android:textSize="12sp"
+            android:fontFamily="@font/bree_serif_regular"
+            android:textColor="@color/white"
+            android:layout_below="@id/welcomeText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:padding="1dp"
+            android:gravity="center"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1"/>
+    </LinearLayout>
 
     <!-- Register Button -->
     <Button
@@ -85,12 +111,12 @@
         android:layout_below="@id/btnLogin"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#ff5400"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="15dp"/>
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+
 
     </LinearLayout>
 
