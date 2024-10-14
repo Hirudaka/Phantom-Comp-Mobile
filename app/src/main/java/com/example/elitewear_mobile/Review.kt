@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ListView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -38,7 +39,10 @@ class Review : AppCompatActivity() {
                     reviewListView.adapter = reviewAdapter
 
                     val averageRating = reviews.map { it.rate }.average()
-                    averageRatingTextView.text = "Average Rating: %.2f".format(averageRating)
+                    averageRatingTextView.text = "Seller Rating: %.2f".format(averageRating)
+
+                    val reviewRate: RatingBar = findViewById(R.id.reviewRate)
+                    reviewRate.rating = averageRating.toFloat()
                 }
             }
         }
