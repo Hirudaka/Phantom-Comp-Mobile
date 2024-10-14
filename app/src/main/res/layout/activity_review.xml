@@ -47,15 +47,35 @@
         android:orientation="vertical"
         android:layout_marginBottom="50dp">
 
-
+    <LinearLayout
+        android:layout_below="@+id/linerfirst2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/averageRatingTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="Average Rating: "
+            android:padding="14dp"
+            android:text="Seller Rating: "
             android:textSize="18sp" />
+
+        <RatingBar
+            android:id="@+id/reviewRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:isIndicator="true"
+            android:layout_marginTop="1dp"
+            android:rating="0"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:progressTint="#FFD700"
+            android:backgroundTint="#D3D3D3"/>
+
+    </LinearLayout>
         <Button
             android:id="@+id/addReviewButton"
             android:layout_width="wrap_content"
