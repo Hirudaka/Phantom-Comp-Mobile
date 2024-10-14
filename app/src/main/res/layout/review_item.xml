@@ -43,10 +43,10 @@
             android:id="@+id/editReviewButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change Rating"
-            android:backgroundTint="#B71C1C"
             android:layout_marginTop="1dp"
-            android:visibility="visible"/>
+            android:backgroundTint="#B71C1C"
+            android:text="Edit Rating"
+            android:visibility="visible" />
 
 
     </LinearLayout>
