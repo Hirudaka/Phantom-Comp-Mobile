@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -118,6 +119,37 @@ class EditReviewActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+        val HomeButton = findViewById<ImageView>(R.id.navHomeUnClick)
+        val ProfilePageButton = findViewById<ImageView>(R.id.navProfileUnClick)
+        val CartPageButton = findViewById<ImageView>(R.id.navCartUnClick)
+        val NotifyPageButton = findViewById<ImageView>(R.id.navNotifyUnClick)
+        val OrderHistoryButton = findViewById<ImageView>(R.id.navOrderHistoryUnClick)
+        val backIcon: ImageView = findViewById(R.id.backIcon)
+
+        backIcon.setOnClickListener {
+            finish()
+        }
+        OrderHistoryButton.setOnClickListener {
+            val intent = Intent(this, OrdersActivity::class.java)
+            startActivity(intent)
+        }
+
+        HomeButton.setOnClickListener {
+            val intent = Intent(this, ProductListActivity::class.java)
+            startActivity(intent)
+        }
+        ProfilePageButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+        CartPageButton.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+        NotifyPageButton.setOnClickListener {
+            val intent = Intent(this, NotificationsActivity::class.java)
+            startActivity(intent)
         }
 
 

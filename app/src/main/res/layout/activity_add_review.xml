@@ -9,6 +9,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linerfirst"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangle_orange_background">
+
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_back3"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/addreviewtextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Post a Review"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linerfirst"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
@@ -19,7 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        app:cardElevation="4dp"
+        android:backgroundTint="@color/white">
 
         <!-- Form elements inside the CardView -->
         <LinearLayout
@@ -61,7 +96,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/orange"
                 android:text="Submit Review"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/bree_serif_regular"/>
 
         </LinearLayout>
 

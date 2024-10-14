@@ -2,28 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#F9F9F9"
-    android:gravity="center">
+    android:background="#F9F9F9">
 
-    <!-- Header -->
-    <TextView
-        android:id="@+id/paymentHeader"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Payment"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FB7503"
-        android:gravity="center"
-        android:layout_marginBottom="24dp" />
+        android:orientation="horizontal"
+        android:id="@+id/linerfirst"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangle_orange_background">
 
-    <!-- Card Type Dropdown -->
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_back3"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/paymentHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Payment"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linerfirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@id/navBar">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            >
     <Spinner
         android:id="@+id/cardTypeSpinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/spinner_background"
         android:padding="12dp" />
@@ -67,8 +109,14 @@
         android:layout_height="wrap_content"
         android:text="Add Payment"
         android:backgroundTint="#FF6F00"
-        android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:padding="16dp" />
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/bree_serif_regular"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </LinearLayout>

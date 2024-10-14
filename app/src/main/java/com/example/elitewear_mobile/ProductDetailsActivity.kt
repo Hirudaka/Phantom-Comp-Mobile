@@ -77,7 +77,12 @@ class ProductDetailsActivity : AppCompatActivity() {
         val ProfilePageButton = findViewById<ImageView>(R.id.navProfileUnClick)
         val CartPageButton = findViewById<ImageView>(R.id.navCartUnClick)
         val NotifyPageButton = findViewById<ImageView>(R.id.navNotifyUnClick)
-        val OrderHistoryButton = findViewById<ImageView>(R.id.navOrderHistoryUnClick) // New Order History Button
+        val OrderHistoryButton = findViewById<ImageView>(R.id.navOrderHistoryUnClick)
+        val backIcon: ImageView = findViewById(R.id.backIcon)
+
+        backIcon.setOnClickListener {
+            finish()
+        }
 
         HomeButton.setOnClickListener {
             val intent = Intent(this, ProductListActivity::class.java)

@@ -9,22 +9,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linerfirst"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangle_orange_background">
+
+
+        <TextView
+            android:id="@+id/addreviewtextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Products"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linerfirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Centered Header -->
-        <TextView
-            android:id="@+id/orderHistoryHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:padding="16dp"
-            android:text="Products"
-            android:textColor="#FF6F00"
-            android:textSize="26sp"
-            android:textStyle="bold" />
-
-        <!-- Search Bar -->
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="match_parent"
@@ -33,9 +45,8 @@
             android:padding="12dp"
             android:background="@drawable/rounded_search_background"
             android:elevation="4dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="10dp" />
 
-        <!-- Category Filter Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +117,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="7dp"
-            android:src="@drawable/baseline_homepage" />
+            android:src="@drawable/baseline_homepage2" />
 
         <ImageView
             android:id="@+id/navCartUnClick"
@@ -125,7 +136,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="7dp"
-            android:src="@drawable/baseline_work_history_24_2" />
+            android:src="@drawable/baseline_work_history_24" />
 
         <ImageView
             android:id="@+id/navNotifyUnClick"

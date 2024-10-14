@@ -64,6 +64,11 @@ class PaymentActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
             }
         }
+        val backIcon: ImageView = findViewById(R.id.backIcon)
+
+        backIcon.setOnClickListener {
+            finish()
+        }
     }
 
     // Function to validate input
