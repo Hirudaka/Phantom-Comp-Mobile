@@ -9,28 +9,45 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linerfirst"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangle_orange_background">
+
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_back3"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/addreviewtextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Seller Reviews"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linerfirst"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginBottom="50dp">
 
 
-        <TextView
-            android:id="@+id/SellerReviewTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/rounded_orange_background"
-            android:elevation="6dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:text="Customer Reviews"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_regular"/>
 
         <TextView
             android:id="@+id/averageRatingTextView"
@@ -43,11 +60,12 @@
             android:id="@+id/addReviewButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add a review"
+            android:text="Add a Review"
             android:backgroundTint="@color/orange"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bree_serif_regular"/>
 
         <ListView
             android:id="@+id/reviewListView"
