@@ -1,6 +1,7 @@
 package com.example.elitewear_mobile
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -64,10 +65,36 @@ class PaymentActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
             }
         }
+        val HomeButton = findViewById<ImageView>(R.id.navHomeUnClick)
+        val ProfilePageButton = findViewById<ImageView>(R.id.navProfileUnClick)
+        val CartPageButton = findViewById<ImageView>(R.id.navCartUnClick)
+        val NotifyPageButton = findViewById<ImageView>(R.id.navNotifyUnClick)
+        val OrderHistoryButton = findViewById<ImageView>(R.id.navOrderHistoryUnClick)
         val backIcon: ImageView = findViewById(R.id.backIcon)
 
         backIcon.setOnClickListener {
             finish()
+        }
+        OrderHistoryButton.setOnClickListener {
+            val intent = Intent(this, OrdersActivity::class.java)
+            startActivity(intent)
+        }
+
+        HomeButton.setOnClickListener {
+            val intent = Intent(this, ProductListActivity::class.java)
+            startActivity(intent)
+        }
+        ProfilePageButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+        CartPageButton.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+        NotifyPageButton.setOnClickListener {
+            val intent = Intent(this, NotificationsActivity::class.java)
+            startActivity(intent)
         }
     }
 
