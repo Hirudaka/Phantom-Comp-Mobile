@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="#F9F9F9">
 
     <LinearLayout
@@ -119,4 +118,59 @@
 
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/navy"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/navHomeUnClick"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:src="@drawable/baseline_homepage" />
+
+        <ImageView
+            android:id="@+id/navCartUnClick"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:src="@drawable/baseline_cart" />
+
+
+        <ImageView
+            android:id="@+id/navOrderHistoryUnClick"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:src="@drawable/baseline_work_history_24" />
+
+        <ImageView
+            android:id="@+id/navNotifyUnClick"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:src="@drawable/baseline_notifications" />
+
+        <ImageView
+            android:id="@+id/navProfileUnClick"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:src="@drawable/baseline_facewhite" />
+    </LinearLayout>
+
+</RelativeLayout>
